@@ -18,6 +18,13 @@
 
 **Requirements:** NAV-01, NAV-02, HOME-08, PERF-03, PERF-05
 
+**Plans:** 3 plans
+
+Plans:
+- [x] 01-01-PLAN.md — Brand tokens (globals.css @theme), fonts (layout.tsx), and stub route pages
+- [ ] 01-02-PLAN.md — Scroll-aware Navbar with mobile hamburger, wired into root layout
+- [ ] 01-03-PLAN.md — 3-column Footer, wired into root layout
+
 **Success criteria:**
 1. `npm run dev` runs without errors
 2. Navigation bar renders with correct brand colours and transitions transparent → solid on scroll
