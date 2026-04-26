@@ -16,3 +16,17 @@ body {
   background-color: #F7F4EF;
   color: #1C1C1C;
 }
+
+/* Ken Burns — compositor-thread only (transform), 14s loop */
+@keyframes kenBurns {
+  0%   { transform: scale(1)    translate(0, 0); }
+  50%  { transform: scale(1.08) translate(-2%, -1%); }
+  100% { transform: scale(1)    translate(0, 0); }
+}
+.ken-burns {
+  animation: kenBurns 14s ease-in-out infinite;
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ken-burns { animation: none; }
+}
