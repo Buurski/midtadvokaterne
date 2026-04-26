@@ -2,18 +2,18 @@
 
 ## Current Status
 
-**Phase:** 1 — Foundation  
-**Current Plan:** 01-03 (complete — Phase 1 done)  
-**Status:** Phase 1 complete, ready for Phase 2  
-**Last updated:** 2026-04-26  
-**Last session:** 2026-04-26 — Completed 01-03-PLAN.md — Stopped at: None
+**Phase:** 2 — Homepage  
+**Current Plan:** 02-04 (complete — Phase 2 done)  
+**Status:** Phase 2 complete, ready for Phase 3  
+**Last updated:** 2026-04-27  
+**Last session:** 2026-04-27 — Completed all 4 Phase 2 plans — Stopped at: None
 
 ## Phase Progress
 
 | Phase | Status |
 |---|---|
 | 1: Foundation | ✅ Complete (3/3 plans complete) |
-| 2: Homepage | ⬜ Not started |
+| 2: Homepage | ✅ Complete (4/4 plans complete) |
 | 3: Inner Pages | ⬜ Not started |
 | 4: Polish & Launch | ⬜ Not started |
 
@@ -29,4 +29,4 @@
 
 ## Notes
 
-Phase 1 complete. Footer server component (3 columns: address/CVR, nav links, hours/phone) wired into root layout. Full page shell ready. Next: Phase 2 — Homepage.
+Phase 2 complete. All 8 homepage sections built and wired: HeroSection (Ken Burns, Framer Motion fade-up), TrustBar (stagger), TaglineSection, TeamSection (B&W hover, stagger), ClientSplitSection (opposing slide-in), TestimonialSection, CtaStrip. Full prefers-reduced-motion support. TypeScript clean. Next: Phase 3 — Inner Pages.

@@ -40,6 +40,14 @@ Plans:
 
 **Requirements:** HOME-01–07, TEAM-01–02, ANIM-01–07
 
+**Plans:** 4 plans
+
+Plans:
+- [x] 02-01-PLAN.md — Hero section: full-viewport Ken Burns image + headline fade-up + CTAs + scroll indicator
+- [x] 02-02-PLAN.md — TrustBar (staggered scroll-reveal) + TaglineSection + TestimonialSection (intentionally still)
+- [x] 02-03-PLAN.md — TeamSection: partner cards (large) + staff grid, B&W hover, stagger reveal
+- [x] 02-04-PLAN.md — ClientSplitSection (opposing slide-in) + CtaStrip + wire app/page.tsx
+
 **Success criteria:**
 1. Hero section fills viewport with Ken Burns animation running (12–15s loop)
 2. Hero headline fades up on load; subtitle appears 300ms later
