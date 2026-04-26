@@ -67,7 +67,7 @@ export function TeamSection() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: reducedMotion ? 0 : 0.5, ease: "easeOut" },
+      transition: { duration: reducedMotion ? 0 : 0.5, ease: "easeOut" as const },
     },
   };
 
