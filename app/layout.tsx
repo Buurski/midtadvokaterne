@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/nav/Navbar";
+import { Footer } from "@/components/footer/Footer";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col font-body bg-off-white text-text">
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
