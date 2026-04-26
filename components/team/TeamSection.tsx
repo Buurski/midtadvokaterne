@@ -91,13 +91,13 @@ export function TeamSection() {
         </motion.div>
         <div className="w-16 h-px bg-amber mx-auto mb-16" />
 
-        {/* Partners — 2 large cards, centred */}
+        {/* Partners — 2 centred cards at natural photo scale */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto mb-20"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-12 max-w-xl mx-auto mb-20"
         >
           {partners.map((p) => (
             <motion.div key={p.name} variants={cardVariants}>
@@ -106,20 +106,23 @@ export function TeamSection() {
           ))}
         </motion.div>
 
-        {/* Staff — 4-col grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6"
-        >
-          {staff.map((s) => (
-            <motion.div key={s.name} variants={cardVariants}>
-              <TeamCard {...s} />
-            </motion.div>
-          ))}
-        </motion.div>
+        {/* Staff — 2-col horizontal compact cards */}
+        <div className="border-t border-navy/10 pt-12">
+          <p className="font-body text-[10px] uppercase tracking-[0.25em] text-text/40 text-center mb-8">Kontoret</p>
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto"
+          >
+            {staff.map((s) => (
+              <motion.div key={s.name} variants={cardVariants}>
+                <TeamCard {...s} />
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </section>
   );

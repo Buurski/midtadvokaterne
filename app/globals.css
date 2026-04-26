@@ -30,3 +30,18 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .ken-burns { animation: none; }
 }
+
+/* Team pop-up — spring-like rise from below */
+@keyframes popUp {
+  0%   { opacity: 0; transform: translateY(80px) scale(0.97); }
+  60%  { opacity: 1; }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+.pop-up {
+  animation: popUp 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .pop-up { animation: none; opacity: 1; }
+}

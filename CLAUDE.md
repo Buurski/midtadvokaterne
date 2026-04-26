@@ -48,6 +48,8 @@ Building the website for **MidtAdvokaterne A/S**, a Danish law firm in Ikast fou
 
 ## Active Skills
 
+> **Primary design skill: `huashu-design`** — invoke this for every UI component and page section, without exception.
+
 Use these skills proactively — invoke them before starting any relevant task:
 
 | Skill | When to use |
