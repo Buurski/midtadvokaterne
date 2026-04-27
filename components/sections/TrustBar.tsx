@@ -54,7 +54,7 @@ export function TrustBar() {
               <div className="font-body text-[11px] font-semibold text-white/100 uppercase tracking-widest mt-1">
                 {item.label}
               </div>
-              <div className="font-body text-xs text-[#7a9bbe] mt-0.5">{item.sub}</div>
+              <div className="font-body text-xs text-[#909090] mt-0.5">{item.sub}</div>
             </motion.div>
           ))}
         </motion.div>
