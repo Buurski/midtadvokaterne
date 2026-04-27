@@ -6,7 +6,7 @@ const trustItems = [
   { number: "60+", label: "Års erfaring", sub: "Grundlagt 1964" },
   { number: "2", label: "Erfarne partnere", sub: "Martin & Loa" },
   { number: "100%", label: "Personlig betjening", sub: "Du taler altid med en advokat" },
-  { number: "4.9★", label: "Google-anmeldelser", sub: "Vores klienter anbefaler os" },
+  { number: "Ikast", label: "Lokalt forankret", sub: "Midt i Jylland" },
 ];
 
 const containerVariants = {
@@ -27,7 +27,15 @@ export function TrustBar() {
   };
 
   return (
-    <section className="bg-navy py-16 md:py-20">
+    /* Float the bar up onto the hero so the photo shows through the blur */
+    <section className="relative z-20 -mt-16 mx-4 md:mx-12 rounded-2xl py-10 md:py-12
+      bg-white/10 backdrop-blur-2xl
+      border border-white/15
+      shadow-[0_8px_40px_rgba(0,0,0,0.22)]">
+
+      {/* Top specular highlight */}
+      <div className="absolute inset-x-0 top-0 h-px bg-white/25 rounded-t-2xl" />
+
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12"
@@ -42,11 +50,11 @@ export function TrustBar() {
               variants={itemVariants}
               className="text-center"
             >
-              <div className="font-heading text-4xl text-amber">{item.number}</div>
-              <div className="font-body text-sm font-semibold text-off-white uppercase tracking-widest mt-1">
+              <div className="font-heading text-4xl text-white font-light">{item.number}</div>
+              <div className="font-body text-[11px] font-semibold text-white/100 uppercase tracking-widest mt-1">
                 {item.label}
               </div>
-              <div className="font-body text-xs text-off-white/60 mt-0.5">{item.sub}</div>
+              <div className="font-body text-xs text-[#7a9bbe] mt-0.5">{item.sub}</div>
             </motion.div>
           ))}
         </motion.div>

@@ -12,7 +12,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-navy text-white">
+    <footer className="bg-[#111827] text-white">
       <div className="max-w-6xl mx-auto px-6 py-16">
         {/* 3-column grid — collapses to 1 column on mobile */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
@@ -57,10 +57,10 @@ export function Footer() {
             </div>
             {/* TODO: replace with real phone number before launch */}
             <a
-              href="tel:+4587000000"
+              href="tel:97152233"
               className="text-amber font-semibold text-sm hover:text-white transition-colors duration-200"
             >
-              +45 87 00 00 00
+              97 15 22 33
             </a>
           </div>
         </div>

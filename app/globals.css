@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand colours — generates bg-navy, text-navy, bg-amber, etc. */
+  /* Brand colours */
   --color-navy: #1A2B45;
-  --color-amber: #C4973A;
+  --color-amber: #0a9e9e;
   --color-off-white: #F7F4EF;
   --color-text: #1C1C1C;
 
-  /* Typography — generates font-heading and font-body utilities */
-  --font-heading: var(--font-playfair), "Playfair Display", Georgia, serif;
-  --font-body: var(--font-inter), "Inter", system-ui, sans-serif;
+  /* Typography — Plus Jakarta Sans throughout */
+  --font-heading: var(--font-jakarta), "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-body: var(--font-jakarta), "Plus Jakarta Sans", system-ui, sans-serif;
 }
 
 body {

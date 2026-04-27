@@ -114,11 +114,11 @@ export function TeamSection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-x-20 gap-y-10 mx-auto justify-items-center"
           >
-            {staff.map((s) => (
+            {staff.map((s, i) => (
               <motion.div key={s.name} variants={cardVariants}>
-                <TeamCard {...s} />
+                <TeamCard {...s} reversed={i % 2 === 0} />
               </motion.div>
             ))}
           </motion.div>

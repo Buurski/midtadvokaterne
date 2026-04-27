@@ -27,27 +27,29 @@ export function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 ${tx} ${
-        scrolled ? 'bg-navy/95 backdrop-blur-md' : 'bg-transparent'
+        scrolled
+          ? 'bg-white/10 backdrop-blur-2xl border-b border-white/15 shadow-[0_4px_30px_rgba(0,0,0,0.12)]'
+          : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-8 md:px-14 h-[72px] flex items-center justify-between">
 
-        {/* Text logo — always white, amber separator dot */}
+        {/* Text logo */}
         <Link
           href="/"
           aria-label="MidtAdvokaterne — gå til forsiden"
-          className="font-body font-medium text-[15px] tracking-[-0.01em] text-white hover:text-white/80 transition-colors"
+          className="font-body font-semibold text-[18px] tracking-[-0.01em] text-white hover:text-white/80 transition-colors"
         >
-          Midt<span className="text-amber font-bold">·</span>Advokaterne
+          Midt<span className="text-amber font-bold text-2xl leading-none mx-1">·</span>Advokaterne
         </Link>
 
-        {/* Desktop nav — white links, no decoration */}
-        <nav aria-label="Primær navigation" className="hidden md:flex items-center gap-8">
+        {/* Desktop nav — boxed pill links */}
+        <nav aria-label="Primær navigation" className="hidden md:flex items-center gap-2">
           {NAV_LINKS.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
-              className={`font-body text-sm text-white/70 hover:text-white ${tx}`}
+              className={`font-body text-sm text-white/85 hover:text-white px-4 py-1.5 rounded-sm border border-white/20 hover:border-white/40 hover:bg-white/10 ${tx}`}
             >
               {label}
             </Link>

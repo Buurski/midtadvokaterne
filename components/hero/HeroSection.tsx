@@ -10,21 +10,19 @@ export function HeroSection() {
   return (
     <section className="relative h-[70vh] min-h-[560px] overflow-hidden bg-[#0D1520]">
 
-      {/* Photo — martinogloa.jpg is a JPG, no transparency issues */}
       <div className="absolute inset-0">
         <Image
-          src="/images/team/martinogloa.jpg"
+          src="/images/team/team-hero.png"
           alt=""
           fill
-          className="object-cover object-center"
+          className="object-cover"
+          style={{ objectPosition: "center 32%" }}
           priority
         />
-        {/* Warm olive-dark overlay — matches editorial law firm reference */}
         <div
           className="absolute inset-0"
           style={{ background: "rgba(18, 28, 22, 0.52)" }}
         />
-        {/* Extra darkening at bottom-left so text is always sharp */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#0D1520]/70 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0D1520]/50 via-transparent to-transparent" />
       </div>
@@ -33,17 +31,15 @@ export function HeroSection() {
       <div className="relative z-10 h-full flex flex-col justify-end">
         <div className="max-w-7xl mx-auto w-full px-8 md:px-14 pb-16 md:pb-20">
 
-          {/* Overline */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: d(0.6), ease: "easeOut" as const }}
-            className="font-body text-[10px] uppercase tracking-[0.38em] text-amber/70 mb-7"
+            className="font-body text-[10px] uppercase tracking-[0.38em] text-white/40 mb-7"
           >
             Advokater · Ikast · Siden 1964
           </motion.p>
 
-          {/* Display heading — two-weight treatment */}
           <h1 className="leading-none">
             <motion.span
               initial={{ opacity: 0, y: 24 }}
@@ -63,7 +59,6 @@ export function HeroSection() {
             </motion.span>
           </h1>
 
-          {/* Body copy — constrained width */}
           <motion.p
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
@@ -74,7 +69,6 @@ export function HeroSection() {
             faglighed, tryghed og personlig betjening siden 1964.
           </motion.p>
 
-          {/* CTAs */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -83,13 +77,13 @@ export function HeroSection() {
           >
             <a
               href="/kontakt"
-              className="font-body font-medium text-sm text-navy bg-amber px-8 py-3.5 hover:bg-amber/90 transition-colors"
+              className="font-body font-medium text-sm text-white bg-amber px-8 py-3.5 rounded-sm hover:bg-amber/90 transition-colors"
             >
               Kontakt os
             </a>
             <a
               href="/retsomraader"
-              className="font-body font-medium text-sm text-white border border-white/25 px-8 py-3.5 hover:bg-white/8 transition-colors"
+              className="font-body font-medium text-sm text-white border border-white/25 px-8 py-3.5 rounded-sm hover:bg-white/8 transition-colors"
             >
               Se retsområder
             </a>
@@ -97,7 +91,6 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Scroll cue — very subtle */}
       <div className="absolute bottom-6 right-10 z-10 flex items-center gap-2 text-white/30">
         <span className="font-body text-[9px] uppercase tracking-[0.3em]">Scroll</span>
         <svg width="12" height="16" viewBox="0 0 12 16" fill="none" className="animate-bounce" aria-hidden="true">

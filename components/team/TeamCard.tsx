@@ -11,6 +11,7 @@ export interface TeamCardProps {
   imageSrc?: string;
   isPartner?: boolean;
   notice?: string;
+  reversed?: boolean;
 }
 
 export function TeamCard({
@@ -22,6 +23,7 @@ export function TeamCard({
   imageSrc,
   isPartner,
   notice,
+  reversed,
 }: TeamCardProps) {
   const initials = name
     .split(" ")
@@ -32,7 +34,6 @@ export function TeamCard({
   if (isPartner) {
     return (
       <div className="group text-center">
-        {/* Photo — displayed close to original 150×116px resolution */}
         <div className="relative w-36 h-28 mx-auto mb-5 overflow-hidden">
           {imageSrc ? (
             <Image
@@ -53,7 +54,6 @@ export function TeamCard({
           )}
         </div>
 
-        {/* Amber rule */}
         <div className="w-8 h-px bg-amber mx-auto mb-3" />
 
         <h3 className="font-heading text-xl text-navy leading-tight mb-1">{name}</h3>
@@ -72,13 +72,11 @@ export function TeamCard({
           </div>
         )}
 
-        {contact && contactType === "phone" && (
-          <a href={`tel:${contact.replace(/\s/g, "")}`} className="font-body text-sm text-amber hover:underline">
-            {contact}
-          </a>
-        )}
-        {contact && contactType === "email" && (
-          <a href={`mailto:${contact}`} className="font-body text-sm text-amber hover:underline">
+        {contact && (
+          <a
+            href={contactType === "phone" ? `tel:${contact.replace(/\s/g, "")}` : `mailto:${contact}`}
+            className="font-body text-sm text-navy/50 hover:text-navy transition-colors"
+          >
             {contact}
           </a>
         )}
@@ -86,10 +84,9 @@ export function TeamCard({
     );
   }
 
-  // Staff: compact horizontal card — photo left, info right
+  // Staff: compact horizontal card — fixed width so grid stays symmetric
   return (
-    <div className="group flex items-center gap-4">
-      {/* 64×64 — roughly matches actual photo resolution */}
+    <div className={`group flex items-start gap-4 w-[260px] ${reversed ? "flex-row-reverse" : ""}`}>
       <div className="relative w-16 h-16 flex-shrink-0 overflow-hidden">
         {imageSrc ? (
           <Image
@@ -104,22 +101,20 @@ export function TeamCard({
           </div>
         )}
         {notice && (
-          <div className="absolute inset-x-0 bottom-0 bg-amber text-navy text-[9px] font-body font-semibold text-center py-0.5 uppercase tracking-wide">
+          <div className="absolute inset-x-0 bottom-0 bg-white/80 text-text/70 text-[9px] font-body font-semibold text-center py-0.5 uppercase tracking-wide">
             {notice}
           </div>
         )}
       </div>
 
-      <div>
-        <p className="font-heading text-base text-navy leading-tight">{name}</p>
+      <div className={reversed ? "text-right" : ""}>
+        <p className="font-heading text-sm text-navy leading-tight">{name}</p>
         <p className="font-body text-xs text-text/45 mt-0.5">{title}</p>
-        {contact && contactType === "email" && (
-          <a href={`mailto:${contact}`} className="font-body text-[11px] text-amber hover:underline mt-0.5 block">
-            {contact}
-          </a>
-        )}
-        {contact && contactType === "phone" && (
-          <a href={`tel:${contact.replace(/\s/g, "")}`} className="font-body text-[11px] text-amber hover:underline mt-0.5 block">
+        {contact && (
+          <a
+            href={contactType === "phone" ? `tel:${contact.replace(/\s/g, "")}` : `mailto:${contact}`}
+            className="font-body text-[11px] text-navy/50 hover:text-navy transition-colors mt-0.5 block"
+          >
             {contact}
           </a>
         )}
